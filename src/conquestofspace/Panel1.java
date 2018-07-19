@@ -35,8 +35,8 @@ public class Panel1 extends JPanel implements ActionListener{
       this.setLayout(null);
       
      //--------------------------------------BOTON 1---------------------------------------------------
-     boton1 = new JButton( new ImageIcon(getClass().getResource("/recursos/Panel1/Imagenes/boton1.png"))); //ASI SE INGRESA CUALQUIER IMAGEN
-     boton1.setBounds(10,10,148,126);
+     boton1 = new JButton( new ImageIcon(getClass().getResource("/recursos/Panel1/Imagenes/boton1.jpg"))); //ASI SE INGRESA CUALQUIER IMAGEN
+     boton1.setBounds(10,10,43,57);
      boton1.setForeground(black);
      this.add(boton1); 
      boton1.addActionListener( new ActionListener(){
@@ -54,18 +54,11 @@ public class Panel1 extends JPanel implements ActionListener{
      boton2.setForeground(black);
      this.add(boton2); 
     
-     boton2.addActionListener(new ActionListener(){ 
-          public void actionPerformed(ActionEvent ae) {
-                 
-              frame2  fr = new frame2(); 
-              JFrame cont = (JFrame) SwingUtilities.getWindowAncestor(this);
-              cont.dispose();
-          }
-     });
+     boton2.addActionListener(this);
    //---------------------------------BOTON 3----------------------------------------------
      
      boton3 = new JButton( new ImageIcon(getClass().getResource("/recursos/Panel1/Imagenes/boton3.png"))); //ASI SE INGRESA CUALQUIER IMAGEN
-     boton3.setBounds(10,10,148,126);
+     boton3.setBounds(10,10,43,56);
      boton3.setForeground(black);
      this.add(boton3); 
      boton3.addActionListener( new ActionListener(){
@@ -103,7 +96,12 @@ public class Panel1 extends JPanel implements ActionListener{
        sonido1.stop();
    } 
     
-    public void actionPerformed(ActionEvent ae) { }
+     public void actionPerformed(ActionEvent ae) {
+                 
+              frame2  fr = new frame2(); 
+              JFrame cont = (JFrame) SwingUtilities.getWindowAncestor(this);
+              cont.dispose();
+          }
    
     public void paintComponent(Graphics g){
         
