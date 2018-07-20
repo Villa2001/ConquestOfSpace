@@ -2,7 +2,7 @@
 //PANTALLA DE INICIO
 package conquestofspace;
 
-import java.applet.AudioClip;
+import java.applet.AudioClip;//AUDIO
 import java.awt.*; //Imagenes
 import javax.swing.*; //Complementos
 import java.awt.event.*; //Eventos 

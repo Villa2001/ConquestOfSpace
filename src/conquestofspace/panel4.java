@@ -3,12 +3,12 @@
 package conquestofspace;
 
 import java.awt.*;
-import javax.swing.*;
 import java.awt.event.*;
-import javax.swing.Timer;
+import javax.swing.*;
 
-public class Panel3 extends JPanel implements KeyListener{
-    
+
+public class panel4 extends JPanel implements KeyListener{
+        
     private ImageIcon fondo1, nave1, meteoro1,meteoro2 ,meteoro3 , meteoro4; 
     private int x1 = 350, y1 = 300; 
     private int  meteorTime = 0;
@@ -22,10 +22,11 @@ public class Panel3 extends JPanel implements KeyListener{
     private JLabel labeltiempo,advertencia,advertencia2; 
     private JButton btinicio; 
      private Font DangerBot ,DangerBot2 ,fipps; 
-
-    public Panel3(){
+    
+    
+    public panel4(){
             
-        this.setSize(800, 500);
+       this.setSize(800, 500);
         this.setFocusable(true);
         this.setVisible(true);
         this.addKeyListener(this);
@@ -34,6 +35,7 @@ public class Panel3 extends JPanel implements KeyListener{
         arreglos(); 
         objetos(); 
         }
+    
     public void arreglos(){
         
      /*
@@ -58,6 +60,7 @@ public class Panel3 extends JPanel implements KeyListener{
     csy[2] = 10; 
     csy[3] = 250; 
     }
+    
     public void objetos(){
         this.setLayout(null);
         
@@ -170,22 +173,22 @@ public class Panel3 extends JPanel implements KeyListener{
     
     public void paintComponent(Graphics g){
             
-        fondo1 = new ImageIcon(getClass().getResource("/recursos/Panel3/Imagenes/fondo1.jpg")); 
+        fondo1 = new ImageIcon(getClass().getResource("/recursos/Panel4/Imagenes/fondo1.jpg")); 
         g.drawImage(fondo1.getImage(), WIDTH, HEIGHT, this);
         //----------------------NAVE1-----------------------------------
-        nave1 = new ImageIcon(getClass().getResource("/recursos/Panel3/Imagenes/nave1.png")); 
+        nave1 = new ImageIcon(getClass().getResource("/recursos/Panel4/Imagenes/nave2.png")); 
         g.drawImage(nave1.getImage(), x1, y1,99, 75,  this);
         //------------------------------------------------------------------
-        meteoro1 = new ImageIcon(getClass().getResource("/recursos/Panel3/Imagenes/meteor1.png")); 
+        meteoro1 = new ImageIcon(getClass().getResource("/recursos/Panel4/Imagenes/meteor1.png")); 
         g.drawImage(meteoro1.getImage(), csx[0], csy[0], csx[0] + 101 , csy[0] +84, px[0], py[0], 101 + px[0] , 84, this);
         //------------------------------------------------------------------
-         meteoro2 = new ImageIcon(getClass().getResource("/recursos/Panel3/Imagenes/meteoro2.png")); 
+         meteoro2 = new ImageIcon(getClass().getResource("/recursos/Panel4/Imagenes/meteoro2.png")); 
         g.drawImage(meteoro2.getImage(), csx[1], csy[1], csx[1] + 101 , csy[1] +84, px[1], py[1], 101 + px[1] , 84, this);
         //------------------------------------------------------------------
-         meteoro3 = new ImageIcon(getClass().getResource("/recursos/Panel3/Imagenes/meteoro3.png")); 
+         meteoro3 = new ImageIcon(getClass().getResource("/recursos/Panel4/Imagenes/meteoro3.png")); 
         g.drawImage(meteoro3.getImage(), csx[2], csy[2], csx[2] + 101 , csy[2] +84, px[2], py[2], 101 + px[2] , 84, this);
         //------------------------------------------------------------------
-         meteoro4 = new ImageIcon(getClass().getResource("/recursos/Panel3/Imagenes/meteoro4.png")); 
+         meteoro4 = new ImageIcon(getClass().getResource("/recursos/Panel4/Imagenes/meteoro4.png")); 
         g.drawImage(meteoro4.getImage(), csx[2], csy[2], csx[2] + 101 , csy[2] +84, px[2], py[2], 101 + px[2] , 84, this);
         //------------------------------------------------------------------
     }
@@ -254,8 +257,4 @@ public class Panel3 extends JPanel implements KeyListener{
         fipps = new Font("fipps", Font.PLAIN, 30);
 
         }
-   
 }
-
-
-    

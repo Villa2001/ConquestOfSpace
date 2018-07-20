@@ -5,10 +5,7 @@ package conquestofspace;
 import java.awt.*;
 import javax.swing.*;
 import java.applet.AudioClip;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.*;
 
 public class Panel2 extends JPanel implements ActionListener{
     
@@ -53,7 +50,7 @@ public class Panel2 extends JPanel implements ActionListener{
           
           //-----------------BOTON2----------------------------------
         
-          boton2  = new JButton( new ImageIcon(getClass().getResource("/recursos/Panel2/Imagenes/boton2.jpg"))); 
+        /*  boton2  = new JButton( new ImageIcon(getClass().getResource("/recursos/Panel2/Imagenes/boton2.jpg"))); 
           boton2.setFont(DangerBot2);
           boton2.setForeground(blanco);
           boton2.setBounds(300,320,152,116);
@@ -64,7 +61,7 @@ public class Panel2 extends JPanel implements ActionListener{
                   inicio(); 
               }
           });
-          
+          */
            //---------------------------------------NAVE 1---------------
       
       nave1 = new JLabel(new ImageIcon(getClass().getResource("/recursos/Panel2/Imagenes/nave1.png"))); 
@@ -97,7 +94,7 @@ public class Panel2 extends JPanel implements ActionListener{
 
               public void mousePressed(MouseEvent me) {
                   objetosML1(); 
-                 
+
               }
 
               public void mouseReleased(MouseEvent me) {}
@@ -117,10 +114,9 @@ public class Panel2 extends JPanel implements ActionListener{
         nave2Selected.setBounds ( 500,200, 99,75);
         this.add(nave2Selected);
         nave2Selected.setVisible(true);
-        nave2.setVisible(false);
-        nave1Selected.setVisible(false);  
+        nave2.setVisible(false); 
         nave1.setVisible(true);
-          
+        inicio1();   
     }
     
      private void objetosML2(){
@@ -129,12 +125,18 @@ public class Panel2 extends JPanel implements ActionListener{
         this.add(nave1Selected);
         nave1Selected.setVisible(true);
         nave1.setVisible(false);
-         nave2Selected.setVisible(false);
          nave2.setVisible(true);
+         inicio2(); 
            
     }
      
-     public void inicio(){
+     public void inicio1(){
+                   frame4 fr = new frame4(); 
+                  JFrame cont = (JFrame) SwingUtilities.getWindowAncestor(this);
+                 cont.dispose();
+     }
+     
+     public void inicio2(){
                    frame3 fr = new frame3(); 
                   JFrame cont = (JFrame) SwingUtilities.getWindowAncestor(this);
                  cont.dispose();

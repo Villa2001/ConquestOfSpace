@@ -2,7 +2,6 @@
 
 package conquestofspace;
 
-import java.applet.AudioClip;
 import java.awt.*;
 import javax.swing.*;
 
