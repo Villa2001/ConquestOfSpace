@@ -1,6 +1,7 @@
-
+//NIVEL 1 NAVE 2
 
 package conquestofspace;
+
 
 import java.awt.*;
 import java.awt.event.*;
@@ -10,7 +11,7 @@ import javax.swing.*;
 public class panel4 extends JPanel implements KeyListener{
         
        
-     private ImageIcon fondo1, nave1, meteoro1,meteoro2 ,meteoro3 , meteoro4,meteoro5,meteoro6;
+    private ImageIcon fondo1, nave1, meteoro1,meteoro2 ,meteoro3 , meteoro4,meteoro5,meteoro6;
     private ImageIcon meteoro7, meteoro8, meteoro9, meteoro10, meteoro11,meteoro12, meteoro13, meteoro14, meteoro15, meteoro16;
     private ImageIcon meteoro17, meteoro18, meteoro19, meteoro20, meteoro21,meteoro22,planeta1;
     private int x1 = 350, y1 = 300; 
@@ -23,17 +24,16 @@ public class panel4 extends JPanel implements KeyListener{
     
     // csx = COORDENADA DE SELECCION 1, csy = COORDENADA DE SELECCION 1, px = POSICION EN X, py = POSICION EN Y.
     private Timer tiempo;
-    private int min, seg=0 ,cs=0; 
+    public static int min = 0, seg=0 ,cs=0; 
     private JLabel labeltiempo,advertencia,advertencia2; 
     private JButton btinicio; 
      private Font DangerBot ,DangerBot2 ,fipps; 
+     public static int planetapt =0;
 
     public panel4(){
-            
-        this.setSize(800, 500);
+         this.setSize(800, 500);
         this.setFocusable(true);
         this.setVisible(true);
-        this.addKeyListener(this);
         tiempo = new Timer(10, acciones); 
         
         arreglos(); 
@@ -54,6 +54,7 @@ public class panel4 extends JPanel implements KeyListener{
         10 = meteoro 11
         11= meteoro 12
         */
+        
     x1 = 350;
     y1 = 300; 
     
@@ -184,8 +185,9 @@ public class panel4 extends JPanel implements KeyListener{
 
             public void mousePressed(MouseEvent me) {
                
-                 inicioTimers(); 
+                  inicioTimers(); 
                  choque();
+                 key();
                 advertencia.setVisible(false);
                 advertencia2.setVisible(false);
             }
@@ -199,7 +201,9 @@ public class panel4 extends JPanel implements KeyListener{
   });
     }
     
-    
+     private void key(){
+        this.addKeyListener(this);
+    }
     
      private Timer movimiento1 = new Timer(100, new ActionListener(){
 
@@ -852,23 +856,23 @@ public class panel4 extends JPanel implements KeyListener{
      
     }
     
-    private ActionListener acciones = new ActionListener(){
+public  ActionListener acciones = new ActionListener(){
 
         public void actionPerformed(ActionEvent ae) {
-            cs++; 
-            if(cs == 100){
-                cs = 0; 
-                seg++; 
+            Panel3.cs++; 
+            if(Panel3.cs == 100){
+                Panel3.cs = 0; 
+                Panel3.seg++; 
                 
          
                         
             }
-            if(seg == 60){
-                seg = 0; 
-                min++; 
+            if(Panel3.seg == 60){
+                Panel3.seg = 0; 
+                Panel3.min++; 
             }
-            if (min == 60){
-                min = 0; 
+            if (Panel3.min == 60){
+                Panel3.min = 0; 
                 
             }
             labeltiempo(); 
@@ -877,8 +881,10 @@ public class panel4 extends JPanel implements KeyListener{
     };
     
     public void labeltiempo(){
-      String tiempo2 = (min <= 9?"0" : " ") + min + ":" + (seg <= 9?"0" : " ") + seg + ":" + (cs<= 9? "0": " ") + cs;
+      String tiempo2 = (Panel3.min <= 9?"0" : " ") + Panel3.min + ":" + (Panel3.seg <= 9?"0" : " ") + Panel3.seg + ":" + (Panel3.cs<= 9? "0": " ") + Panel3.cs;
       labeltiempo.setText(tiempo2);
+     
+      
     }
     
     public void choque(){
@@ -1147,10 +1153,10 @@ public class panel4 extends JPanel implements KeyListener{
          if((x1 + 92  >= csx[22])  && (x1 <= csx[22] + 215)  && (y1 + 73  >= csy[22]) && (y1 <= csy[22] + 210 ) ){
          MeteoroOFF(); 
          arreglos();
-         frame6 fr = new frame6(); 
+         frame5 fr = new frame5(); 
          JFrame cont = (JFrame) SwingUtilities.getWindowAncestor(this);
           cont.dispose();
-
+         planetapt = 100000;
        
         } 
           
@@ -1280,6 +1286,11 @@ public class panel4 extends JPanel implements KeyListener{
       meteor20.stop();
       meteor21.stop();
       meteor22.stop();
+      movimiento1.stop();
+      movimiento2.stop();
+      movimiento3.stop();
+      movimiento4.stop(); 
       
       }
+      
 }

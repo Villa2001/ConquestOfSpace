@@ -10,7 +10,7 @@ public class frame3 extends JFrame{
     
      public frame3(){
             
-            super("CONQUEST OF REQUEST"); 
+            super("CONQUEST OF SPACE"); 
               this.setSize(800, 500);
               this.setLocationRelativeTo(null);
               this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

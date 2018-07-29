@@ -1,13 +1,16 @@
 package conquestofspace;
 
+import java.awt.*;
 import javax.swing.JFrame;
 
 
 public class frame6 extends JFrame{
     
+    
+    
     Panel6 pan = new Panel6();
     public frame6(){
-             super("CONQUEST OF REQUEST"); 
+             super("CONQUEST OF SPACE"); 
               this.setSize(800, 500);
               this.setLocationRelativeTo(null);
               this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -15,6 +18,9 @@ public class frame6 extends JFrame{
               
               this.add(pan);
               
+             
               this.setVisible(true);
     }
+    
+
 }
