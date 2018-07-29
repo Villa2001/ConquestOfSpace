@@ -1,15 +1,15 @@
-//NIVEL 2 NAVE 2
+
 
 package conquestofspace;
-
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
 
-public class Panel6 extends JPanel implements KeyListener{
-     private ImageIcon fondo1, nave1, meteoro1,meteoro2 ,meteoro3 , meteoro4,meteoro5,meteoro6;
+public class Panel7 extends JPanel implements KeyListener{
+    
+         private ImageIcon fondo1, nave1, meteoro1,meteoro2 ,meteoro3 , meteoro4,meteoro5,meteoro6;
     private ImageIcon meteoro7, meteoro8, meteoro9, meteoro10, meteoro11,meteoro12, meteoro13, meteoro14, meteoro15, meteoro16;
     private ImageIcon meteoro17, meteoro18, meteoro19, meteoro20, meteoro21,meteoro22,planeta1;
     private int x1 = 350, y1 = 300; 
@@ -28,7 +28,7 @@ public class Panel6 extends JPanel implements KeyListener{
      private Font DangerBot ,DangerBot2 ,fipps; 
      public static int planetapt =0;
 
-    public Panel6(){
+    public Panel7(){
          this.setSize(800, 500);
         this.setFocusable(true);
         this.setVisible(true);
@@ -741,110 +741,110 @@ public class Panel6 extends JPanel implements KeyListener{
     
     public void paintComponent(Graphics g){
             
-        fondo1 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/fondo1.jpg")); 
+        fondo1 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/fondo1.jpg")); 
         g.drawImage(fondo1.getImage(), WIDTH, HEIGHT, this);
         //----------------------NAVE1-----------------------------------
-        nave1 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/nave2.png")); 
+        nave1 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/nave1.png")); 
         g.drawImage(nave1.getImage(), x1, y1,99, 75,  this);
         //------------------------------------------------------------------
-        meteoro1 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/meteoro1.png")); 
+        meteoro1 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/meteoro1.png")); 
         g.drawImage(meteoro1.getImage(), csx[0], csy[0], csx[0] + 101 , csy[0] +101, px[0], py[0], 101 + px[0] , 101, this);
       
       // g.drawImage(meteoro1.getImage(), Inicio x, Inicio y, limite en x, Limite y, posicion, posicion, tamaño en x ,Tamaño y, this);
         
         //------------------------------------------------------------------
         
-         meteoro2 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/meteoro2.png")); 
+         meteoro2 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/meteoro2.png")); 
         g.drawImage(meteoro2.getImage(), csx[1], csy[1], csx[1] + 101 , csy[1] + 101, px[1], py[1], 101 + px[1] , 101, this);
         //------------------------------------------------------------------
         
-         meteoro3 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/meteoro3.png")); 
+         meteoro3 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/meteoro3.png")); 
         g.drawImage(meteoro3.getImage(), csx[2], csy[2], csx[2] + 19 , csy[2] +19, px[2], py[2], 19 + px[2] , 19, this);
         //------------------------------------------------------------------
         
-         meteoro4 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/meteoro4.png")); 
+         meteoro4 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/meteoro4.png")); 
         g.drawImage(meteoro4.getImage(), csx[3], csy[3], csx[3] + 90 , csy[3] +85, px[3], py[3], 90 + px[3] , 85, this);
         //------------------------------------------------------------------
         
-        meteoro5 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/meteoro5.png")); 
+        meteoro5 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/meteoro5.png")); 
         g.drawImage(meteoro5.getImage(), csx[4], csy[4], csx[4] + 98 , csy[4] +98, px[4], py[4], 98 + px[4] , 98, this);
         //------------------------------------------------------------------
         
-        meteoro6 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/meteoro6.png")); 
+        meteoro6 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/meteoro6.png")); 
         g.drawImage(meteoro6.getImage(), csx[5], csy[5], csx[5] + 43 , csy[5] + 43, px[5], py[5], 43 + px[5] , 43, this);
                 
         //------------------------------------------------------------------
         
-        meteoro7 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/meteoro7.png")); 
+        meteoro7 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/meteoro7.png")); 
         g.drawImage(meteoro7.getImage(), csx[6], csy[6], csx[6] + 101 , csy[6] +101 , px[6], py[6], 101 + px[6] , 101, this);
         
         //------------------------------------------------------------------
         
-        meteoro8 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/meteoro8.png")); 
+        meteoro8 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/meteoro8.png")); 
         g.drawImage(meteoro8.getImage(), csx[7], csy[7], csx[7] + 120 , csy[7] +120, px[7], py[7], 120 + px[7] , 120, this);
         //------------------------------------------------------------------
         
-        meteoro9 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/meteoro9.png")); 
+        meteoro9 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/meteoro9.png")); 
         g.drawImage(meteoro9.getImage(), csx[8], csy[8], csx[8] + 89 , csy[8] +89, px[8], py[6], 89 + px[8] , 89, this);
         //------------------------------------------------------------------
         
-        meteoro10 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/meteoro10.png")); 
+        meteoro10 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/meteoro10.png")); 
         g.drawImage(meteoro10.getImage(), csx[9], csy[9], csx[9] + 98 , csy[9] +98, px[9], py[9], 98 + px[9] , 98, this);
         //------------------------------------------------------------------
         
-        meteoro11 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/meteoro11.png")); 
+        meteoro11 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/meteoro11.png")); 
         g.drawImage(meteoro11.getImage(), csx[10], csy[10], csx[10] + 28 , csy[10] +28, px[10], py[10], 28 + px[10] , 28, this);
         //------------------------------------------------------------------
         
-          meteoro12 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/meteoro1.png")); 
+          meteoro12 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/meteoro1.png")); 
         g.drawImage(meteoro12.getImage(), csx[11], csy[11], csx[11] + 101 , csy[11] +101, px[11], py[11], 101 + px[11] , 101, this);
       
       // g.drawImage(meteoro1.getImage(), Inicio x, Inicio y, limite en x, Limite y, posicion, posicion, tamaño en x ,Tamaño y, this);
         
         //------------------------------------------------------------------
         
-         meteoro13 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/meteoro2.png")); 
+         meteoro13 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/meteoro2.png")); 
         g.drawImage(meteoro13.getImage(), csx[12], csy[12], csx[12] + 101 , csy[12] + 101, px[12], py[12], 101 + px[12] , 101, this);
         //------------------------------------------------------------------
         
-         meteoro14 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/meteoro3.png")); 
+         meteoro14 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/meteoro3.png")); 
         g.drawImage(meteoro14.getImage(), csx[13], csy[13], csx[13] + 19 , csy[13] +19, px[13], py[13], 19 + px[13] , 19, this);
         //------------------------------------------------------------------
         
-         meteoro15 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/meteoro4.png")); 
+         meteoro15 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/meteoro4.png")); 
         g.drawImage(meteoro15.getImage(), csx[14], csy[14], csx[14] + 90 , csy[14] +85, px[14], py[14], 90 + px[14] , 85, this);
         //------------------------------------------------------------------
         
-        meteoro16 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/meteoro5.png")); 
+        meteoro16 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/meteoro5.png")); 
         g.drawImage(meteoro16.getImage(), csx[15], csy[15], csx[15] + 98 , csy[15] +98, px[15], py[15], 98 + px[15] , 98, this);
         //------------------------------------------------------------------
         
-        meteoro17 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/meteoro6.png")); 
+        meteoro17 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/meteoro6.png")); 
         g.drawImage(meteoro17.getImage(), csx[16], csy[16], csx[16] + 43 , csy[16] + 43, px[16], py[16], 43 + px[16] , 43, this);
                 
         //------------------------------------------------------------------
         
-        meteoro18 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/meteoro7.png")); 
+        meteoro18 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/meteoro7.png")); 
         g.drawImage(meteoro18.getImage(), csx[17], csy[17], csx[17] + 101 , csy[17] +101 , px[17], py[17], 101 + px[17] , 101, this);
         
         //------------------------------------------------------------------
         
-        meteoro19 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/meteoro8.png")); 
+        meteoro19 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/meteoro8.png")); 
         g.drawImage(meteoro19.getImage(), csx[18], csy[18], csx[18] + 120 , csy[18] +120, px[18], py[18], 120 + px[18] , 120, this);
         //------------------------------------------------------------------
         
-        meteoro20 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/meteoro9.png")); 
+        meteoro20 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/meteoro9.png")); 
         g.drawImage(meteoro20.getImage(), csx[19], csy[19], csx[19] + 89 , csy[19] +89, px[19], py[19], 89 + px[19] , 89, this);
         //------------------------------------------------------------------
         
-        meteoro21 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/meteoro10.png")); 
+        meteoro21 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/meteoro10.png")); 
         g.drawImage(meteoro21.getImage(), csx[20], csy[20], csx[20] + 98 , csy[20] +98, px[20], py[20], 98 + px[20] , 98, this);
         //------------------------------------------------------------------
         
-        meteoro22 = new ImageIcon(getClass().getResource("/recursos/Panel6/Imagenes/meteoro11.png")); 
+        meteoro22 = new ImageIcon(getClass().getResource("/recursos/Panel7/Imagenes/meteoro11.png")); 
         g.drawImage(meteoro22.getImage(), csx[21], csy[21], csx[21] + 28 , csy[21] +28, px[21], py[21], 28 + px[21] , 28, this);
         //------------------------------------------------------------------
-        planeta1 = new ImageIcon(getClass().getResource("/recursos/Panel6/imagenes/planeta1.png")); 
+        planeta1 = new ImageIcon(getClass().getResource("/recursos/Panel7/imagenes/planeta1.png")); 
         g.drawImage(planeta1.getImage(),csx[22],csy[22], csx[22] + 226, csy[22] + 223, px[22],py[22],226 + px[22] , 223 , this);
         
         
@@ -1309,4 +1309,3 @@ public  ActionListener acciones = new ActionListener(){
       
       }
 }
-

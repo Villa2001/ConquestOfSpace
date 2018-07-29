@@ -207,7 +207,7 @@ public class Panel3 extends JPanel implements KeyListener{
      private Timer movimiento1 = new Timer(100, new ActionListener(){
 
         public void actionPerformed(ActionEvent ae) {
-              //MOVIMIENTO METEOROS
+               //MOVIMIENTO METEOROS
                 t++;
                 
                 if(t >=0 ){
@@ -273,7 +273,7 @@ public class Panel3 extends JPanel implements KeyListener{
       private Timer movimiento3 = new Timer(60, new ActionListener(){
 
         public void actionPerformed(ActionEvent ae) {
-              //MOVIMIENTO METEOROS
+            //MOVIMIENTO METEOROS
             
             t2++;
             if(t2 >=0 ){
@@ -324,7 +324,7 @@ public class Panel3 extends JPanel implements KeyListener{
        private Timer movimiento2 = new Timer(30, new ActionListener(){
 
         public void actionPerformed(ActionEvent ae) {
-              //MOVIMIENTO METEOROS
+            //MOVIMIENTO METEOROS
             t1++; 
             
             if(t1 >=0){
@@ -1152,7 +1152,7 @@ public class Panel3 extends JPanel implements KeyListener{
          if((x1 + 92  >= csx[22])  && (x1 <= csx[22] + 215)  && (y1 + 73  >= csy[22]) && (y1 <= csy[22] + 210 ) ){
          MeteoroOFF(); 
          arreglos();
-         frame5 fr = new frame5(); 
+         frame7 fr = new frame7(); 
          JFrame cont = (JFrame) SwingUtilities.getWindowAncestor(this);
           cont.dispose();
          planetapt = 100000;

@@ -1153,10 +1153,10 @@ public  ActionListener acciones = new ActionListener(){
          if((x1 + 92  >= csx[22])  && (x1 <= csx[22] + 215)  && (y1 + 73  >= csy[22]) && (y1 <= csy[22] + 210 ) ){
          MeteoroOFF(); 
          arreglos();
-         frame5 fr = new frame5(); 
+         frame6 fr = new frame6(); 
          JFrame cont = (JFrame) SwingUtilities.getWindowAncestor(this);
           cont.dispose();
-         planetapt = 100000;
+         Panel3.planetapt = 100000;
        
         } 
           
