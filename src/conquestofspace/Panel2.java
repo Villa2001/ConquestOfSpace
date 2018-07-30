@@ -1,4 +1,4 @@
-
+//NAVES
 
 package conquestofspace;
 
@@ -15,12 +15,12 @@ public class Panel2 extends JPanel implements ActionListener{
         this.setFocusable(true);
         this.setVisible(true);
          objetos(); 
-              
+        sonidoON();
         }
      
      //---------------------ZONA DE VARIABLES -------------
      private  ImageIcon fondo2; 
-     
+       private AudioClip sonido1;
      public int WIDTH = 800, HEIGHT = 500;
      private Color blanco,black; 
      private Font DangerBot,DangerBot2,fipps; 
@@ -134,12 +134,14 @@ public class Panel2 extends JPanel implements ActionListener{
                    frame4 fr = new frame4(); 
                   JFrame cont = (JFrame) SwingUtilities.getWindowAncestor(this);
                  cont.dispose();
+                 sonidoOFF();
      }
      
      public void inicio2(){
                    frame3 fr = new frame3(); 
                   JFrame cont = (JFrame) SwingUtilities.getWindowAncestor(this);
                  cont.dispose();
+                 sonidoOFF();
      }
      
      public void paintComponent(Graphics g){
@@ -171,4 +173,15 @@ public class Panel2 extends JPanel implements ActionListener{
         blanco = new Color (255 , 255 , 255);
         black = new Color(0,0,0); 
         }
+    
+      public void sonidoON(){
+         
+         sonido1 = java.applet.Applet.newAudioClip(getClass().getResource("/recursos/Panel2/sonido/sonido1.wav")); 
+         sonido1.play();
+     
+     }
+    
+      public void sonidoOFF(){
+         sonido1.stop();
+   } 
 }

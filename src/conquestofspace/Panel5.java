@@ -2,6 +2,7 @@
 
 package conquestofspace;
 
+import java.applet.AudioClip;
 import java.awt.*;import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 ;
@@ -10,6 +11,7 @@ import javax.swing.*;
 
 public class Panel5 extends JPanel{
     
+      private AudioClip sonido1;
       private ImageIcon fondo1;
       private Font DangerBot, DangerBot2;
       private Color blanco,black;
@@ -24,6 +26,8 @@ public class Panel5 extends JPanel{
         this.setFocusable(true);
         this.setVisible(true);
        objetos();
+       sonidoON();
+       
         }
       
         public void paintComponent(Graphics g){
@@ -49,6 +53,7 @@ public class Panel5 extends JPanel{
 
              
              public void actionPerformed(ActionEvent ae) {
+              sonidoOFF();
               salida(); 
                  
              }
@@ -88,4 +93,16 @@ public class Panel5 extends JPanel{
        sumpunt = 0; 
        
     }
+    
+  public void sonidoON(){
+         
+         sonido1 = java.applet.Applet.newAudioClip(getClass().getResource("/recursos/Panel5/sonido/sonido1.wav")); 
+         sonido1.play();
+     
+     }
+    
+   public void sonidoOFF(){
+       sonido1.stop();
+   } 
+    
 }

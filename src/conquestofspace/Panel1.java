@@ -27,6 +27,7 @@ public class Panel1 extends JPanel implements ActionListener{
         this.setSize(WIDTH, HEIGHT);
        this.setFocusable(true);
        objetos(); 
+       sonidoON();
        
     }
     
@@ -35,7 +36,7 @@ public class Panel1 extends JPanel implements ActionListener{
       this.setLayout(null);
       
      //--------------------------------------BOTON 1---------------------------------------------------
-     boton1 = new JButton( new ImageIcon(getClass().getResource("/recursos/Panel1/Imagenes/boton1.jpg"))); //ASI SE INGRESA CUALQUIER IMAGEN
+    /* boton1 = new JButton( new ImageIcon(getClass().getResource("/recursos/Panel1/Imagenes/boton1.jpg"))); //ASI SE INGRESA CUALQUIER IMAGEN
      boton1.setBounds(10,10,43,57);
      boton1.setForeground(black);
      this.add(boton1); 
@@ -47,7 +48,7 @@ public class Panel1 extends JPanel implements ActionListener{
               boton3.setVisible(true); 
   }
      });
-    
+    */
      //---------------------------------------BOTON 2 ------------------------------------------------------
      boton2 = new JButton( new ImageIcon(getClass().getResource("/recursos/Panel1/Imagenes/boton2.jpg"))); //ASI SE INGRESA CUALQUIER IMAGEN
      boton2.setBounds(300,300,148,126);
@@ -56,7 +57,7 @@ public class Panel1 extends JPanel implements ActionListener{
     
      boton2.addActionListener(this);
    //---------------------------------BOTON 3----------------------------------------------
-     
+     /*
      boton3 = new JButton( new ImageIcon(getClass().getResource("/recursos/Panel1/Imagenes/boton3.png"))); //ASI SE INGRESA CUALQUIER IMAGEN
      boton3.setBounds(10,10,43,56);
      boton3.setForeground(black);
@@ -69,6 +70,7 @@ public class Panel1 extends JPanel implements ActionListener{
               boton1.setVisible(true);
   } 
      });
+             */
      //---------------------------------------------------------------------------------------------
     }
     
@@ -101,6 +103,7 @@ public class Panel1 extends JPanel implements ActionListener{
               frame2  fr = new frame2(); 
               JFrame cont = (JFrame) SwingUtilities.getWindowAncestor(this);
               cont.dispose();
+              sonidoOFF();
           }
    
     public void paintComponent(Graphics g){

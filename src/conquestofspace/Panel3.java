@@ -6,9 +6,11 @@ package conquestofspace;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+import java.applet.AudioClip;
 
 public class Panel3 extends JPanel implements KeyListener{
     
+     private AudioClip sonido1;
     private ImageIcon fondo1, nave1, meteoro1,meteoro2 ,meteoro3 , meteoro4,meteoro5,meteoro6;
     private ImageIcon meteoro7, meteoro8, meteoro9, meteoro10, meteoro11,meteoro12, meteoro13, meteoro14, meteoro15, meteoro16;
     private ImageIcon meteoro17, meteoro18, meteoro19, meteoro20, meteoro21,meteoro22,planeta1;
@@ -37,6 +39,7 @@ public class Panel3 extends JPanel implements KeyListener{
         
         arreglos(); 
         objetos(); 
+        sonidoON();
         }
     public void arreglos(){     
      /*
@@ -1149,7 +1152,7 @@ public class Panel3 extends JPanel implements KeyListener{
        
         }
          
-         if((x1 + 92  >= csx[22])  && (x1 <= csx[22] + 215)  && (y1 + 73  >= csy[22]) && (y1 <= csy[22] + 210 ) ){
+         if((x1 + 92  >= csx[22])  && (x1 <= csx[22] + 114)  && (y1 + 73  >= csy[22]) && (y1 <= csy[22] + 112 ) ){
          MeteoroOFF(); 
          arreglos();
          frame7 fr = new frame7(); 
@@ -1289,8 +1292,19 @@ public class Panel3 extends JPanel implements KeyListener{
       movimiento2.stop();
       movimiento3.stop();
       movimiento4.stop(); 
-      
+      sonidoOFF();
       }
+      
+    public void sonidoON(){
+         
+         sonido1 = java.applet.Applet.newAudioClip(getClass().getResource("/recursos/Panel3/sonido/sonido1.wav")); 
+         sonido1.play();
+     
+     }
+    
+   public void sonidoOFF(){
+       sonido1.stop();
+   } 
 }
 
 

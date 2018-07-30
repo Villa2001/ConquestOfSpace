@@ -1,7 +1,8 @@
-
+//NIVEL 2 NAVE 1
 
 package conquestofspace;
 
+import java.applet.AudioClip;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -9,7 +10,8 @@ import javax.swing.*;
 
 public class Panel7 extends JPanel implements KeyListener{
     
-         private ImageIcon fondo1, nave1, meteoro1,meteoro2 ,meteoro3 , meteoro4,meteoro5,meteoro6;
+    private AudioClip sonido1;
+    private ImageIcon fondo1, nave1, meteoro1,meteoro2 ,meteoro3 , meteoro4,meteoro5,meteoro6;
     private ImageIcon meteoro7, meteoro8, meteoro9, meteoro10, meteoro11,meteoro12, meteoro13, meteoro14, meteoro15, meteoro16;
     private ImageIcon meteoro17, meteoro18, meteoro19, meteoro20, meteoro21,meteoro22,planeta1;
     private int x1 = 350, y1 = 300; 
@@ -37,8 +39,9 @@ public class Panel7 extends JPanel implements KeyListener{
          inicioTimers(); 
         arreglos(); 
         objetos(); 
+        sonidoON();
         }
-    public void arreglos(){     
+      public void arreglos(){     
      /*
         0 = meteoro 1
         1 = meteoro 2
@@ -130,32 +133,33 @@ public class Panel7 extends JPanel implements KeyListener{
     csx[21] = 400; //PRIMER NIVEL 
     csx[22] = 330;
     
-    csy[0] = -120; 
-    csy[1] = -130; 
-    csy[2] = -210; 
-    csy[3] = -150; 
-    csy[4] = -160; 
-    csy[5] = -140; 
-    csy[6] = -140;
-    csy[7] = -300; 
-    csy[8] = -20; 
-    csy[9] = -50; 
-    csy[10] =- 130; 
-    csy[11] = -120; 
-    csy[12] = -110; 
-    csy[13] = -150; 
-    csy[14] = -150; 
-    csy[15] = -140;  
-    csy[16] = -120; 
-    csy[17] = -130; 
-    csy[18] = -250; 
-    csy[19] = -150; 
-    csy[20] =- 120; 
-     csy[21] = -170; 
-     csy[22] = -400;
+    csy[0] = -220; 
+    csy[1] = -230; 
+    csy[2] = -310; 
+    csy[3] = -250; 
+    csy[4] = -260; 
+    csy[5] = -240; 
+    csy[6] = -240;
+    csy[7] = -400; 
+    csy[8] = -120; 
+    csy[9] = -150; 
+    csy[10] =- 230; 
+    csy[11] = -220; 
+    csy[12] = -210; 
+    csy[13] = -250; 
+    csy[14] = -250; 
+    csy[15] = -240;  
+    csy[16] = -220; 
+    csy[17] = -230; 
+    csy[18] = -350; 
+    csy[19] = -250; 
+    csy[20] =- 220; 
+     csy[21] = -270; 
+     csy[22] = -500;
     
      
     }
+      
     public void objetos(){
         this.setLayout(null);
         
@@ -192,86 +196,99 @@ public class Panel7 extends JPanel implements KeyListener{
        
   });
     }
-
-    
-     private Timer movimiento1 = new Timer(70, new ActionListener(){
+       private Timer movimiento1 = new Timer(70, new ActionListener(){
 
         public void actionPerformed(ActionEvent ae) {
             //MOVIMIENTO METEOROS
                 t++;
                 
-                if(t >=0 ){
-                 //   csy[0] = csy[0]+5; 
+                if(t >=5 ){
+                   csy[0] = csy[0]+5; 
                    csy[1] = csy[1]+5; 
-                    csy[4] = csy[4]+5; 
+                   csy[4] = csy[4]+5; 
                 }
-                
-                 if(t >=6 ){
+       
+                 if(t >=11 ){
              //   csy[0] = csy[0]+5; 
-               csy[1] = csy[1]+5; 
-               csy[4] = csy[4]+5; 
+               csx[1] = csx[1]-3; 
+               csx[4] = csx[4]-3; 
                  
                 }
                
-               if(t >=11 ){
+               if(t >=16 ){
               // csy[6] = csy[6]+5; 
                csy[7] = csy[7]+5; 
                csy[9] = csy[9]+5; 
                }
                
-               if(t >=16){
+               if(t >=21){
              //  csy[11] = csy[11]+5; 
                csy[12] = csy[12]+5; 
                csy[18] = csy[18]+5;
                }
                
-               if(t >=21){
+               if(t >=26){
              //  csy[15] = csy[15]+5; 
-                  csy[17] = csy[17]+5;
+                  csy[17] = csy[17]-5;
              
-                  csy[20] = csy[20]+5; 
+                  csy[20] = csy[20]-5; 
                
                
                }
-               
-               
-               
-               
-               if(t == 140){
+               if(t == 150){
                   
-               t=0; 
-               csy[17] = -100;
-               csy[12] =-100; 
-               csy[1] = -100; 
-               csy[1] = -100; 
+              
+              
                csy[0] = -100; 
                csy[1] = -100; 
                csy[4] = -100; 
-               csy[6] = -100; 
+               csy[6] = -100;
                csy[7] = -100; 
                csy[9] = -100; 
                csy[11] = -100; 
                csy[12] = -100; 
-               csy[18] = -100; 
                csy[15] = -100; 
                csy[17] = -100; 
+               csy[18] = -100; 
                csy[20] = -100; 
+              
+                csx[0] = 600; 
+                csx[1] = 100; 
+                csx[4] = 400;
+                csx[6] = 455; 
+                csx[7] = 440;
+                csx[9] = 10;
+                csx[11] = 100; 
+                csx[12] = 700;
+                csx[15] = 700; 
+                csx[17] = 600; 
+                csx[18] = 100; 
+                csx[20] =-250; 
+
+                                      
                }
                
+              if(t==160){
+                    t=0; 
+                   csx[4] = 400; //PRIMER NIVEL
+                   csx[17] = 600; 
+                   csx[16] = 600; //PRIMER NIVEL
+                          
+               }
                 choque(); 
-
                 
+               
         }
      });
-     
-      private Timer movimiento3 = new Timer(40, new ActionListener(){
+    
+          private Timer movimiento3 = new Timer(40, new ActionListener(){
 
         public void actionPerformed(ActionEvent ae) {
                 //MOVIMIENTO METEOROS
-            
+ 
             t2++;
             if(t2 >=0 ){
-              //  csy[3] = csy[3]+5; 
+              //csy[3] = csy[3]+5; 
                 csy[5] = csy[5]+5; 
                 
                 }
@@ -284,11 +301,12 @@ public class Panel7 extends JPanel implements KeyListener{
                
                if(t2 >=11 ){
              //  csy[14] = csy[14]+5; 
-                csy[16] = csy[16]+5;
+                csy[16] = csy[16]-3;
                }
                
                if(t2 >=16 ){
                csy[21] = csy[21]+5; 
+               csx[16] = csx[16]+5;
                }
                
                if(t2 >=21){
@@ -297,10 +315,10 @@ public class Panel7 extends JPanel implements KeyListener{
              
                }
               
-                if(t2 == 130){
+                if(t2 == 150){
                   
-                    t2=0; 
-                    csy[8] = -100; 
+                   
+                    
                     csy[3] = -100; 
                     csy[5] = -100; 
                     csy[8] = -100; 
@@ -308,8 +326,21 @@ public class Panel7 extends JPanel implements KeyListener{
                     csy[14] = -100; 
                     csy[16] = -100; 
                     csy[21] = -100; 
+                    
+                 
+                    csx[3] = 200; 
+                    csx[5] = 160;
+                    csx[8] = 750;
+                    csx[10] = 650;
+                    csx[14] = 700; 
+                    csx[16] = 600; 
+                    csx[21] = 400; 
                }
                 
+                if(t2 == 160){
+                     t2=0; 
+                 csy[16] = 600;
+                }
                 
                 
                  choque(); 
@@ -321,7 +352,7 @@ public class Panel7 extends JPanel implements KeyListener{
         public void actionPerformed(ActionEvent ae) {
                 //MOVIMIENTO METEOROS
             t1++; 
-            
+     
             if(t1 >=0){
                csy[2] = csy[2]+5; 
                 }
@@ -345,19 +376,23 @@ public class Panel7 extends JPanel implements KeyListener{
                
                }
                
-                if(t == 40){
+                if(t == 50){
                t1=0; 
                csy[2] = -100; 
-               csy[2] = -100; 
-                csy[13] = -100; 
-               }
+               csy[13] = -100; 
                
+               csx[2] = 500;
+               csx[13] = 70;
+               }
+                  
+            
+                 
                 choque(); 
-
+       
         }
      });
        
-       private Timer movimiento4 = new Timer(70,new ActionListener(){
+private Timer movimiento4 = new Timer(70,new ActionListener(){
 
         public void actionPerformed(ActionEvent ae) {
             
@@ -371,12 +406,12 @@ public class Panel7 extends JPanel implements KeyListener{
                    csy[22] = csy[22] -5;
                    csy[4] = -100; 
                }
-                
-        }
+               
+        }  
       
       
-      }); 
-       
+      });
+      
       private Timer planetat1 = new Timer(70,new ActionListener(){
 
         public void actionPerformed(ActionEvent ae) {
@@ -911,14 +946,14 @@ public  ActionListener acciones = new ActionListener(){
     
     public void choque(){
         
-         //METEORO1
-        if((x1 + 85  >= csx[0])  && (x1 <= csx[0] + 101)  && (y1 + 67  >= csy[0]) && (y1 <= csy[0] + 75 ) ){
+                 //METEORO1
+         if((x1 + 92  >= csx[1])  && (x1 <= csx[1] + 101)  && (y1 + 70  >= csy[1]) && (y1 <= csy[1] + 75 ) ){
          MeteoroOFF(); 
          arreglos();
-          frame5 fr = new frame5(); 
+         frame5 fr = new frame5(); 
          JFrame cont = (JFrame) SwingUtilities.getWindowAncestor(this);
           cont.dispose();
-
+         
         }
         
         
@@ -952,7 +987,7 @@ public  ActionListener acciones = new ActionListener(){
         }
         
         //METEORO5
-         if((x1 + 92  >= csx[4])  && (x1 <= csx[4] + 95)  && (y1 + 73  >= csy[4]) && (y1 <= csy[4] + 98 ) ){
+         if((x1 + 88  >= csx[4])  && (x1 <= csx[4] + 93)  && (y1 + 73  >= csy[4]) && (y1 <= csy[4] + 98 ) ){
                           MeteoroOFF(); 
 
          arreglos(); 
@@ -964,7 +999,7 @@ public  ActionListener acciones = new ActionListener(){
         }
         
         //METEORO6
-         if((x1 + 92  >= csx[5])  && (x1 <= csx[5] + 40)  && (y1 + 73  >= csy[5]) && (y1 <= csy[5] + 40 ) ){
+         if((x1 + 88  >= csx[5])  && (x1 <= csx[5] + 38)  && (y1 + 73  >= csy[5]) && (y1 <= csy[5] + 40 ) ){
          MeteoroOFF(); 
          arreglos();
         frame5 fr = new frame5(); 
@@ -1083,7 +1118,7 @@ public  ActionListener acciones = new ActionListener(){
         }
         
         //METEORO16
-         if((x1 + 92  >= csx[15])  && (x1 <= csx[15] + 95)  && (y1 + 73  >= csy[15]) && (y1 <= csy[15] + 98 ) ){
+         if((x1 + 88  >= csx[4])  && (x1 <= csx[4] + 93)  && (y1 + 73  >= csy[4]) && (y1 <= csy[4] + 98 )  ){
                           MeteoroOFF(); 
 
              arreglos();
@@ -1095,7 +1130,7 @@ public  ActionListener acciones = new ActionListener(){
         }
         
         //METEORO17
-         if((x1 + 92  >= csx[16])  && (x1 <= csx[16] + 40)  && (y1 + 73  >= csy[16]) && (y1 <= csy[16] + 40 ) ){
+         if((x1 + 88  >= csx[5])  && (x1 <= csx[5] + 38)  && (y1 + 73  >= csy[5]) && (y1 <= csy[5] + 40 )  ){
                           MeteoroOFF(); 
 
              arreglos();
@@ -1166,16 +1201,16 @@ public  ActionListener acciones = new ActionListener(){
        
         }
          
-         if((x1 + 92  >= csx[22])  && (x1 <= csx[22] + 215)  && (y1 + 73  >= csy[22]) && (y1 <= csy[22] + 210 ) ){
+         if((x1 + 92  >= csx[22])  && (x1 <= csx[22] + 116)  && (y1 + 73  >= csy[22]) && (y1 <= csy[22] + 115 ) ){
          MeteoroOFF(); 
          arreglos();
-         frame5 fr = new frame5(); 
+         frame8 fr = new frame8(); 
          JFrame cont = (JFrame) SwingUtilities.getWindowAncestor(this);
           cont.dispose();
-         planetapt = 100000;
+         Panel3.planetapt = 200000;
        
         } 
-          
+  
     }
 
     public void keyTyped(KeyEvent ke) {}
@@ -1306,6 +1341,19 @@ public  ActionListener acciones = new ActionListener(){
       movimiento2.stop();
       movimiento3.stop();
       movimiento4.stop(); 
+      sonidoOFF();
       
       }
+      
+    public void sonidoON(){
+         
+         sonido1 = java.applet.Applet.newAudioClip(getClass().getResource("/recursos/Panel7/sonido/sonido1.wav")); 
+         sonido1.play();
+     
+     }
+    
+   public void sonidoOFF(){
+       sonido1.stop();
+   } 
+    
 }
